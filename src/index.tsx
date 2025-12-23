@@ -1,9 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.scss';
-import App from './App/App';
+import "./index.scss";
+import { createRoot } from "react-dom/client";
+import App from "./App/App";
 
-ReactDOM.render(
-    <App  />,
-  document.getElementById('root'),
-);
+const root = document.getElementById("root");
+if (!root) throw new Error("Failed to find the root element");
+
+createRoot(root).render(<App />);
